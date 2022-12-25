@@ -8,7 +8,6 @@ pushd $SCRIPT_DIR
 rm -rf output
 mkdir -p output
 
-speeds=(60 70 75 85 90 100)
 speeds=($(cat playlists.txt  | awk '{print $1}' | grep "^[0-9][0-9]*$"))
 
 for i in "${speeds[@]}"; do
